@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+body {
+  background-color: #f9f3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.quiz-box {
+  background-color: #fff;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border: 3px solid #9c88ff;
+}
+
+.quiz-header {
+  text-align: center;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #9c88ff;
+}
+
+.quiz-header h2 {
+  color: #6c5ce7;
+  font-size: 24px;
+}
+
+.question-counter {
+  color: #636e72;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.question {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #2d3436;
+  text-align: center;
+}
+
+.answer-choice {
+  background-color: #f1f1f1;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 2px solid #dfe6e9;
+  color: #2d3436;
+}
+
+.answer-choice:hover {
+  transform: scale(1.02);
+  background-color: #dfe6e9;
+}
+
+.answer-choice.picked {
+  background-color: #a29bfe;
+  border-color: #6c5ce7;
+  color: white;
+}
+
+.answer-choice.correct {
+  background-color: #55efc4;
+  border-color: #00b894;
+}
+
+.answer-choice.wrong {
+  background-color: #fab1a0;
+  border-color: #e17055;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #5649c0;
+}
+
+button:disabled {
+  background-color: #b2bec3;
+  cursor: not-allowed;
+}
+
+.results {
+  text-align: center;
+  display: none;
+  background-color: #fff;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border: 3px solid #9c88ff;
+}
+
+.results h2 {
+  color: #6c5ce7;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.score-display {
+  font-size: 22px;
+  margin: 20px 0;
+  color: #2d3436;
+}
+
+.final-score {
+  font-weight: bold;
+  font-size: 36px;
+  color: #6c5ce7;
+  margin: 10px 0;
+}
+
+.emoji {
+  font-size: 50px;
+  margin: 10px 0;
+}
