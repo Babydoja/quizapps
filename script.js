@@ -44,17 +44,20 @@ let userAnswers = [];
 // Show the current question and answers
 function showQuestion() {
   // Update the question text
+  const answerChoices = document.querySelectorAll(".answer-choice");
   questionText.innerHTML = questions[currentQuestionIndex].question;
 
   // Update each answer choice
   for (let i = 0; i < answerChoices.length; i++) {
+    
     answerChoices[i].innerHTML = questions[currentQuestionIndex].choices[i];
-    answerChoices[i].className = "answer-choice";
+    answerChoices[i].classList.remove('picked')
+    // answerChoices[i].className = "answer-choice";
 
     // If user already answered this question, show their selection
-    if (userAnswers[currentQuestionIndex] === i) {
-      answerChoices[i].classList.add("picked");
-    }
+    // if (userAnswers[currentQuestionIndex] === i) {
+    //   answerChoices[i].classList.add("picked");
+    // }
   }
 
   // Update the question counter
@@ -125,10 +128,11 @@ backButton.addEventListener("click", goToPreviousQuestion);
 
 playAgainButton.addEventListener("click", function () {
   // Reset everything and start over
-  currentQuestionIndex = 0;
-  score = 0;
-  userAnswers = [];
-  showQuestion();
+  // currentQuestionIndex = 0;
+  // score = 0;
+  // userAnswers = [];
+  // showQuestion();
+  location.reload();
 });
 
 // Add click handlers for all answer choices
@@ -171,10 +175,7 @@ viewCorrectAnswersButton.addEventListener('click', function () {
 
     // Add event listener for play again button
     document.getElementById('play-again-final').addEventListener('click', function () {
-        currentQuestionIndex = 0;
-        score = 0;
-        userAnswers = [null, null, null, null];
-        showQuestion();
+       location.reload();
     });
 });
 
